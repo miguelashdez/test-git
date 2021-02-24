@@ -1,0 +1,172 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Prueba la nueva tecnología PowerShell multiplataforma https://aka.ms/pscore6
+
+PS C:\Users\Miguel> cd C:\Users\Miguel\Documents\JavaScript
+PS C:\Users\Miguel\Documents\JavaScript> git clone https://github.com/miguelashdez/test-git.git
+Cloning into 'test-git'...
+remote: Enumerating objects: 43, done.
+Receiving objects: 100% (43/43), 18.4
+Resolving deltas: 100% (2/2), done.3) esolving deltas:   0% (0/2)
+remote: Counting objects: 100% (43/43), done.
+remote: Compressing objects: 100% (39/39), done.
+remote: Total 43 (delta 2), reused 39 (delta 1), pack-reused 0
+PS C:\Users\Miguel\Documents\JavaScript> cd test-git
+PS C:\Users\Miguel\Documents\JavaScript\test-git> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\Miguel\Documents\JavaScript\test-git> git log
+commit 9a3c314ed041d2c9c65f89dfda89f611cf28113d (HEAD -> master, origin/master, origin/HEAD)
+Author: Miguel <miguelashdez@gmail.com>
+Date:   Wed Feb 24 14:02:31 2021 -0600
+
+    Create README.md
+
+commit 6972f4663f125871d9b7c5bec5d2d51c826cf945
+Author: Miguel <miguelashdez@gmail.com>
+Date:   Wed Feb 24 13:59:40 2021 -0600
+
+    commit inicial
+PS C:\Users\Miguel\Documents\JavaScript\test-git> git reset --hard 6972f4663f125871d9b7c5bec5d2d51c826cf945
+HEAD is now at 6972f46 commit inicial
+PS C:\Users\Miguel\Documents\JavaScript\test-git> git log
+commit 6972f4663f125871d9b7c5bec5d2d51c826cf945 (HEAD -> master)
+Author: Miguel <miguelashdez@gmail.com>
+Date:   Wed Feb 24 13:59:40 2021 -0600
+
+    commit inicial
+PS C:\Users\Miguel\Documents\JavaScript\test-git> git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    01-fundamentos/assets/js/bases/alerts.js
+        deleted:    01-fundamentos/assets/js/bases/app.js
+        deleted:    01-fundamentos/assets/js/bases/arreglos.js
+        deleted:    01-fundamentos/assets/js/bases/arreglos2.js
+        deleted:    01-fundamentos/assets/js/bases/funciones.js
+        deleted:    01-fundamentos/assets/js/bases/if-else.js
+        deleted:    01-fundamentos/assets/js/bases/logica-booleana.js
+        deleted:    01-fundamentos/assets/js/bases/objeto-literal.js
+        deleted:    01-fundamentos/assets/js/bases/operador-ternario.js
+        deleted:    01-fundamentos/assets/js/bases/palabras-reservadas.js
+        deleted:    01-fundamentos/assets/js/bases/primitivos.js
+        deleted:    01-fundamentos/assets/js/bases/protip-retorno.js
+        deleted:    01-fundamentos/assets/js/bases/protip-ternario.js
+        deleted:    01-fundamentos/assets/js/bases/switch.js
+        deleted:    01-fundamentos/assets/js/bases/valor-referencia.js
+        deleted:    01-fundamentos/assets/js/ciclos/for.js
+        deleted:    01-fundamentos/assets/js/ciclos/while-do-while.js
+        deleted:    01-fundamentos/assets/js/classes/class.js
+        deleted:    01-fundamentos/assets/js/classes/constructores-multiples.js
+        deleted:    01-fundamentos/assets/js/classes/esnext.js
+        deleted:    01-fundamentos/assets/js/classes/problema.js
+        deleted:    01-fundamentos/assets/js/classes/singleton.js
+        deleted:    01-fundamentos/assets/js/classes/sub-classes.js
+        deleted:    01-fundamentos/index.html
+        deleted:    02-blackjack/assets/css/styles.css
+        deleted:    02-blackjack/assets/js/juego.js
+        deleted:    02-blackjack/assets/js/underscore-min.js
+        deleted:    02-blackjack/index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        blackjack/
+        fundamentos/
+        texto.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Miguel\Documents\JavaScript\test-git> git add .
+PS C:\Users\Miguel\Documents\JavaScript\test-git> git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    02-blackjack/assets/css/styles.css -> blackjack/assets/css/styles.css
+        renamed:    02-blackjack/assets/js/juego.js -> blackjack/assets/js/juego.js
+        renamed:    02-blackjack/assets/js/underscore-min.js -> blackjack/assets/js/underscore-min.js
+        renamed:    02-blackjack/index.html -> blackjack/index.html
+        renamed:    01-fundamentos/assets/js/bases/alerts.js -> fundamentos/assets/js/bases/alerts.js
+        renamed:    01-fundamentos/assets/js/bases/app.js -> fundamentos/assets/js/bases/app.js
+        renamed:    01-fundamentos/assets/js/bases/arreglos.js -> fundamentos/assets/js/bases/arreglos.js
+        renamed:    01-fundamentos/assets/js/bases/arreglos2.js -> fundamentos/assets/js/bases/arreglos2.js
+        renamed:    01-fundamentos/assets/js/bases/funciones.js -> fundamentos/assets/js/bases/funciones.js
+        renamed:    01-fundamentos/assets/js/bases/if-else.js -> fundamentos/assets/js/bases/if-else.js
+        renamed:    01-fundamentos/assets/js/bases/logica-booleana.js -> fundamentos/assets/js/bases/logica-booleana.js
+        renamed:    01-fundamentos/assets/js/bases/objeto-literal.js -> fundamentos/assets/js/bases/objeto-literal.js
+        renamed:    01-fundamentos/assets/js/bases/operador-ternario.js -> fundamentos/assets/js/bases/operador-ternario.js
+        renamed:    01-fundamentos/assets/js/bases/palabras-reservadas.js -> fundamentos/assets/js/bases/palabras-reservadas.js
+        renamed:    01-fundamentos/assets/js/bases/primitivos.js -> fundamentos/assets/js/bases/primitivos.js
+        renamed:    01-fundamentos/assets/js/bases/protip-retorno.js -> fundamentos/assets/js/bases/protip-retorno.js
+        renamed:    01-fundamentos/assets/js/bases/protip-ternario.js -> fundamentos/assets/js/bases/protip-ternario.js
+        renamed:    01-fundamentos/assets/js/bases/switch.js -> fundamentos/assets/js/bases/switch.js
+        renamed:    01-fundamentos/assets/js/bases/valor-referencia.js -> fundamentos/assets/js/bases/valor-referencia.js
+        renamed:    01-fundamentos/assets/js/ciclos/for.js -> fundamentos/assets/js/ciclos/for.js
+        renamed:    01-fundamentos/assets/js/ciclos/while-do-while.js -> fundamentos/assets/js/ciclos/while-do-while.js
+        renamed:    01-fundamentos/assets/js/classes/class.js -> fundamentos/assets/js/classes/class.js
+        renamed:    01-fundamentos/assets/js/classes/constructores-multiples.js -> fundamentos/assets/js/classes/constructores-multiples.js
+        renamed:    01-fundamentos/assets/js/classes/esnext.js -> fundamentos/assets/js/classes/esnext.js
+        renamed:    01-fundamentos/assets/js/classes/problema.js -> fundamentos/assets/js/classes/problema.js
+        renamed:    01-fundamentos/assets/js/classes/singleton.js -> fundamentos/assets/js/classes/singleton.js
+        renamed:    01-fundamentos/assets/js/classes/sub-classes.js -> fundamentos/assets/js/classes/sub-classes.js
+        renamed:    01-fundamentos/index.html -> fundamentos/index.html
+        new file:   texto.txt
+
+PS C:\Users\Miguel\Documents\JavaScript\test-git> git commit -m "test git" --amend
+[master 56bd2e0] test git
+ Date: Wed Feb 24 13:59:40 2021 -0600
+ 29 files changed, 1070 insertions(+)
+ create mode 100644 blackjack/assets/css/styles.css
+ create mode 100644 blackjack/assets/js/juego.js
+ create mode 100644 blackjack/assets/js/underscore-min.js
+ create mode 100644 blackjack/index.html
+ create mode 100644 fundamentos/assets/js/bases/alerts.js
+ create mode 100644 fundamentos/assets/js/bases/app.js
+ create mode 100644 fundamentos/assets/js/bases/arreglos.js
+ create mode 100644 fundamentos/assets/js/bases/arreglos2.js
+ create mode 100644 fundamentos/assets/js/bases/funciones.js
+ create mode 100644 fundamentos/assets/js/bases/if-else.js
+ create mode 100644 fundamentos/assets/js/bases/logica-booleana.js
+ create mode 100644 fundamentos/assets/js/bases/objeto-literal.js
+ create mode 100644 fundamentos/assets/js/bases/operador-ternario.js
+ create mode 100644 fundamentos/assets/js/bases/palabras-reservadas.js
+ create mode 100644 fundamentos/assets/js/bases/primitivos.js
+ create mode 100644 fundamentos/assets/js/bases/protip-retorno.js
+ create mode 100644 fundamentos/assets/js/bases/protip-ternario.js
+ create mode 100644 fundamentos/assets/js/bases/switch.js
+ create mode 100644 fundamentos/assets/js/bases/valor-referencia.js
+ create mode 100644 fundamentos/assets/js/ciclos/for.js
+ create mode 100644 fundamentos/assets/js/ciclos/while-do-while.js
+ create mode 100644 fundamentos/assets/js/classes/class.js
+ create mode 100644 fundamentos/assets/js/classes/constructores-multiples.js
+ create mode 100644 fundamentos/assets/js/classes/esnext.js
+ create mode 100644 fundamentos/assets/js/classes/problema.js
+ create mode 100644 fundamentos/assets/js/classes/singleton.js
+ create mode 100644 fundamentos/assets/js/classes/sub-classes.js
+ create mode 100644 fundamentos/index.html
+ create mode 100644 texto.txt
+PS C:\Users\Miguel\Documents\JavaScript\test-git> git push --force
+Enumerating objects: 41, done.
+Counting objects: 100% (41/41), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (41/41), 17.87 KiB | 469.00 KiB/s, done.
+Total 41 (delta 1), reused 38 (delta 1), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/miguelashdez/test-git.git
+ + 9a3c314...56bd2e0 master -> master (forced update)
+PS C:\Users\Miguel\Documents\JavaScript\test-git> git log
+commit 56bd2e05fddfcf3fef19a91562f49d5581843f91 (HEAD -> master, origin/master, origin/HEAD)
+Author: Miguel <miguelashdez@gmail.com>
+Date:   Wed Feb 24 13:59:40 2021 -0600
+
+    test git
+PS C:\Users\Miguel\Documents\JavaScript\test-git>
